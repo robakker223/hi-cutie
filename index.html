@@ -12,7 +12,7 @@
       height: 100vh;
       flex-direction: column;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #ffe6f0, #ffe0cc);
+      background: linear-gradient(135deg, #f8f8f8, #ffe0cc);
       color: #333;
       text-align: center;
       position: relative;
@@ -76,10 +76,26 @@
     }
 
     #firstMessage {
-      background-color: white;
+      background-color: #fff;
       color: #333;
       padding: 40px;
       border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .flower-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .flower-gallery img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 10px;
     }
   </style>
 </head>
@@ -111,6 +127,15 @@
 
     <div class="flash">YOU ARE AMAZING 💫</div>
     <img src="https://media.tenor.com/lJ3F4GzNZ9IAAAAC/cute-cat.gif" alt="Cute Dancing Cat" />
+
+    <div class="flower-gallery">
+      <img src="https://cdn.pixabay.com/photo/2016/11/29/04/00/flowers-1867468_1280.jpg" alt="Flower 1">
+      <img src="https://cdn.pixabay.com/photo/2017/08/30/07/52/roses-2691047_1280.jpg" alt="Flower 2">
+      <img src="https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014_1280.jpg" alt="Flower 3">
+      <img src="https://cdn.pixabay.com/photo/2015/04/19/08/32/rose-729509_1280.jpg" alt="Flower 4">
+      <img src="https://cdn.pixabay.com/photo/2016/03/27/22/22/tulip-1283873_1280.jpg" alt="Flower 5">
+    </div>
+
     <div class="flash">YOU DESERVE THE WORLD 🌸</div>
 
     <audio id="sweetMusic" autoplay loop>
