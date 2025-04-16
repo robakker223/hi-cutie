@@ -56,21 +56,6 @@
       75% { color: #ffc0cb; }
     }
 
-    table {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      border-collapse: collapse;
-      background-color: rgba(255, 255, 255, 0.7);
-      color: #333;
-      font-size: 14px;
-    }
-
-    table, th, td {
-      border: 1px solid #ff99c8;
-      padding: 6px 12px;
-    }
-
     audio {
       display: none;
     }
@@ -83,21 +68,6 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     }
 
-    .flower-gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-      margin-top: 30px;
-    }
-
-    .flower-gallery img {
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
-      border-radius: 10px;
-    }
-
     .cutie-wrapper {
       position: relative;
       margin-top: 40px;
@@ -108,6 +78,7 @@
       height: auto;
       border-radius: 15px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      z-index: 1;
     }
 
     .cutie-label {
@@ -125,6 +96,31 @@
       gap: 10px;
       margin-bottom: -20px;
     }
+
+    .floral-frame {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 30px;
+    }
+
+    .floral-frame img.flower {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      position: absolute;
+    }
+
+    .floral-frame img.centerpiece {
+      position: relative;
+      z-index: 1;
+      width: 200px;
+      border-radius: 15px;
+    }
   </style>
 </head>
 <body>
@@ -134,40 +130,19 @@
   </div>
 
   <div id="secondMessage" class="hidden">
-    <table>
-      <tr>
-        <th>Compliment / Encouragement</th>
-        <th>Because 💕</th>
-      </tr>
-      <tr>
-        <td>You're so kind</td>
-        <td>You always bring warmth</td>
-      </tr>
-      <tr>
-        <td>You're smart and capable</td>
-        <td>You've overcome so much</td>
-      </tr>
-      <tr>
-        <td>You're beautiful inside & out</td>
-        <td>Just being you is enough</td>
-      </tr>
-    </table>
-
     <div class="flash">YOU ARE AMAZING 💫</div>
     <img src="https://media.tenor.com/lJ3F4GzNZ9IAAAAC/cute-cat.gif" alt="Cute Dancing Cat" />
 
     <div class="cutie-wrapper">
       <div class="arrows">⬅️ ⬇️ ➡️</div>
-      <img src="https://i.postimg.cc/25JGZCjZ/Whats-App-Image-2025-04-16-at-14-10-01.jpg" alt="Biggest Cutie" />
+      <div class="floral-frame">
+        <img class="flower" src="https://cdn.pixabay.com/photo/2016/11/29/04/00/flowers-1867468_1280.jpg" style="top: -60px; left: -60px;">
+        <img class="flower" src="https://cdn.pixabay.com/photo/2017/08/30/07/52/roses-2691047_1280.jpg" style="top: -60px; right: -60px;">
+        <img class="flower" src="https://cdn.pixabay.com/photo/2015/04/19/08/32/rose-729509_1280.jpg" style="bottom: -60px; left: -60px;">
+        <img class="flower" src="https://cdn.pixabay.com/photo/2016/03/27/22/22/tulip-1283873_1280.jpg" style="bottom: -60px; right: -60px;">
+        <img class="centerpiece" src="https://i.postimg.cc/25JGZCjZ/Whats-App-Image-2025-04-16-at-14-10-01.jpg" alt="Biggest Cutie" />
+      </div>
       <div class="cutie-label">biggest cutie 🥹💘</div>
-    </div>
-
-    <div class="flower-gallery">
-      <img src="https://cdn.pixabay.com/photo/2016/11/29/04/00/flowers-1867468_1280.jpg" alt="Flower 1">
-      <img src="https://cdn.pixabay.com/photo/2017/08/30/07/52/roses-2691047_1280.jpg" alt="Flower 2">
-      <img src="https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014_1280.jpg" alt="Flower 3">
-      <img src="https://cdn.pixabay.com/photo/2015/04/19/08/32/rose-729509_1280.jpg" alt="Flower 4">
-      <img src="https://cdn.pixabay.com/photo/2016/03/27/22/22/tulip-1283873_1280.jpg" alt="Flower 5">
     </div>
 
     <div class="flash">YOU DESERVE THE WORLD 🌸</div>
