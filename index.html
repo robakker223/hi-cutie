@@ -47,6 +47,7 @@
       animation: flash 2s infinite;
       margin: 20px 0;
       color: #ff69b4;
+      display: none;
     }
 
     @keyframes flash {
@@ -95,18 +96,18 @@
   </div>
 
   <div id="secondMessage" class="hidden">
-    <div class="flash">Read here first pls → YOU ARE AMAZING 💫</div>
-    <div class="flash">Now read here →</div>
-    <img src="https://media.tenor.com/lJ3F4GzNZ9IAAAAC/cute-cat.gif" alt="Cute Dancing Cat" />
+    <div class="flash" id="msg1">Read here first pls → YOU ARE AMAZING 💫</div>
+    <div class="flash" id="msg2">Now read here →</div>
+    <img id="msg3" class="hidden" src="https://media.tenor.com/lJ3F4GzNZ9IAAAAC/cute-cat.gif" alt="Cute Dancing Cat" />
 
     <div class="cutie-wrapper">
-      <p class="flash">feel better cutie lolololol</p>
-      <div class="flash">Here →</div>
-      <img src="https://i.postimg.cc/25JGZCjZ/Whats-App-Image-2025-04-16-at-14-10-01.jpg" alt="Biggest Cutie" />
-      <div class="cutie-label">biggest cutie</div>
+      <p class="flash" id="msg4">feel better cutie lolololol</p>
+      <div class="flash" id="msg5">Here →</div>
+      <img id="msg6" class="hidden" src="https://i.postimg.cc/25JGZCjZ/Whats-App-Image-2025-04-16-at-14-10-01.jpg" alt="Biggest Cutie" />
+      <div class="cutie-label flash" id="msg7">biggest cutie</div>
     </div>
 
-    <div class="flash">Now this one → YOU DESERVE THE WORLD 🌸</div>
+    <div class="flash" id="msg8">Now this one → YOU DESERVE THE WORLD 🌸</div>
 
     <audio id="sweetMusic" autoplay loop>
       <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_6d2cbacddb.mp3?filename=spring-lofi-112194.mp3" type="audio/mpeg" />
@@ -115,10 +116,20 @@
   </div>
 
   <script>
+    const sequence = ["msg1", "msg2", "msg3", "msg4", "msg5", "msg6", "msg7", "msg8"];
+    let delay = 500;
+
     document.getElementById('secondBtn').onclick = function () {
       document.getElementById('firstMessage').style.display = 'none';
       document.getElementById('secondMessage').classList.remove('hidden');
       document.getElementById('sweetMusic').play();
+
+      sequence.forEach((id, index) => {
+        setTimeout(() => {
+          document.getElementById(id).classList.remove('hidden');
+          document.getElementById(id).style.display = 'block';
+        }, delay * index);
+      });
     };
   </script>
   <div style="position: absolute; bottom: 10px; right: 20px; font-size: 18px; color: #ff69b4; font-weight: bold;">Thx</div>
